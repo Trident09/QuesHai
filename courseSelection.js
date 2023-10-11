@@ -19,6 +19,48 @@ const coursesData = [
             "Computer",
             "Pathology"
         ]
+    },
+    {
+        courseName: "B.A.L.L.B",
+        subjects: [
+            "C",
+            "C++",
+            "SAD",
+            "COA",
+            "Java"
+            
+        ]
+    },
+    {
+        courseName: "M.Sc",
+        subjects: [
+            "Physics",
+            "Chemistry",
+            "Yoga",
+            "Computer",
+            "Pathology"
+        ]
+    },
+    {
+        courseName: "BCA",
+        subjects: [
+            "C",
+            "C++",
+            "SAD",
+            "COA",
+            "Java"
+            
+        ]
+    },
+    {
+        courseName: "Phd",
+        subjects: [
+            "Physics",
+            "Chemistry",
+            "Yoga",
+            "Computer",
+            "Pathology"
+        ]
     }
 ];
 
