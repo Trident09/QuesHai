@@ -60,6 +60,7 @@ li {
     transition: ease-out 0.3s;
     padding: 10px;
     font-weight: 700;
+    overflow: hidden;
 }
 
 li:hover {
