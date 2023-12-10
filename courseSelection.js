@@ -1,4 +1,4 @@
-const coursesData = [
+const coursesData = [{courseName:":)"},
     {
         courseName: "B.Tech",
         subjects: [
@@ -27,7 +27,7 @@ const coursesData = [
             "Operating_System",
             "Cryptography",
             "dotNet_Programming",
-            "Advance_Computer_Networks",
+            /*"Advance_Computer_Networks",
             "Web_Development_Technology",
             "Computer_Programming_with_Python",
             "Theory_of_Computation",
@@ -48,10 +48,10 @@ const coursesData = [
             "Mobile_Phone_Security",
             "Malware_Analysis",
             "Incident_Response_Management_and_Threat_Hunting",
-            "Blockchain_Technology_and_Security"
+            "Blockchain_Technology_and_Security"*/
         ]
-    },
-    {
+    },{courseName:"CmingSun"}
+    /*{
         courseName: "DFIS",
         subjects: [
             "Computer_Forensics",
@@ -263,7 +263,7 @@ const coursesData = [
             "Basics_of_Management_Information_System",
             "Computer_Application_in_Business"
         ]
-    },
+    },*/
 ];
 
 const courseList = document.getElementById("course-list");
