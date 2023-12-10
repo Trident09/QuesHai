@@ -288,7 +288,7 @@ window.addEventListener("load", populateCourses);
 function selectCourse(subjects) {
     // Save selected subjects and their corresponding PDF URLs to localStorage
     const subjectsAndPDFs = subjects.map(subject => {
-        return { subject, pdfURL: `dummy.pdf` }; // Update with the actual PDF file paths  [`path/to/${subject}.pdf`]
+        return { subject, pdfURL: `assets/${subject}.pdf` }; // Update with the actual PDF file paths  [`path/to/${subject}.pdf`]
     });
     localStorage.setItem('selectedSubjectsAndPDFs', JSON.stringify(subjectsAndPDFs));
 
