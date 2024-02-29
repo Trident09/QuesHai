@@ -2,7 +2,7 @@ const coursesData = [{courseName:":)"},
     {
         courseName: "B.Tech",
         subjects: [
-            "Engineering_Physics",
+            "Engineering Physics",
             "Engineering_Mathematics_1",
             "Basics_of_Electrical_Engineering",
             "Fundamentals_in_Computer_Programming_with_C",
