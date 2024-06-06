@@ -1,92 +1,37 @@
-import React, { useState } from 'react';
-import { Button, Typography, Input, InputLabel, FormControl, FormHelperText } from '@mui/material';
+import React from 'react';
 
-const Contact = () => {
-  const [form, setForm] = useState({
-    name: '',
-    email: '',
-    message: '',
-  });
-
-  const [errors, setErrors] = useState({});
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setForm({
-      ...form,
-      [name]: value,
-    });
-  };
-
-  const validate = () => {
-    let tempErrors = {};
-    tempErrors.name = form.name.length >= 3 ? "" : "Name should be at least 3 characters long";
-    tempErrors.email = /^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(form.email) ? "" : "Email must be a valid email address";
-    tempErrors.message = form.message.length >= 10 ? "" : "Message should be at least 10 characters long";
-
-    setErrors(tempErrors);
-    return Object.values(tempErrors).every(x => x === "");
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (validate()) {
-      console.log(form);
-    }
-  };
-
-  return (
-    <div className="flex justify-center items-center h-screen p-4">
-      <form onSubmit={handleSubmit} className="bg-white p-6 rounded shadow-md w-full max-w-lg">
-        <Typography variant="h2" className="text-2xl font-bold mb-6 text-center">Contact Us</Typography>
-
-        <div className="mb-4">
-          <FormControl fullWidth>
-            <InputLabel>Name</InputLabel>
-            <Input
-              name="name"
-              value={form.name}
-              onChange={handleChange}
-              error={!!errors.name}
-            />
-            <FormHelperText error>{errors.name}</FormHelperText>
-          </FormControl>
+const ContactUs = () => {
+    return (
+        <div className="min-h-screen flex flex-col">
+            <header className="bg-gray-900 text-white py-8">
+                <div className="container mx-auto px-4">
+                    <h1 className="text-3xl font-bold">Contact Us</h1>
+                </div>
+            </header>
+            <main className="flex-grow py-12">
+                <div className="container mx-auto px-4">
+                    <p className="text-lg mb-4">Have any questions or suggestions? Feel free to reach out to us!</p>
+                    <form className="max-w-lg mx-auto">
+                        <div className="mb-4">
+                            <label htmlFor="name" className="block text-lg font-semibold mb-2">Your Name</label>
+                            <input type="text" id="name" name="name" className="border border-gray-300 rounded-md px-4 py-2 w-full" />
+                        </div>
+                        <div className="mb-4">
+                            <label htmlFor="email" className="block text-lg font-semibold mb-2">Your Email</label>
+                            <input type="email" id="email" name="email" className="border border-gray-300 rounded-md px-4 py-2 w-full" />
+                        </div>
+                        <div className="mb-4">
+                            <label htmlFor="message" className="block text-lg font-semibold mb-2">Your Message</label>
+                            <textarea id="message" name="message" rows="5" className="border border-gray-300 rounded-md px-4 py-2 w-full"></textarea>
+                        </div>
+                        <button type="submit" className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                            Submit
+                        </button>
+                    </form>
+                </div>
+            </main>
         </div>
+    );
+}
 
-        <div className="mb-4">
-          <FormControl fullWidth>
-            <InputLabel>Email</InputLabel>
-            <Input
-              name="email"
-              value={form.email}
-              onChange={handleChange}
-              error={!!errors.email}
-            />
-            <FormHelperText error>{errors.email}</FormHelperText>
-          </FormControl>
-        </div>
-
-        <div className="mb-4">
-          <FormControl fullWidth>
-            <InputLabel>Message</InputLabel>
-            <Input
-              name="message"
-              value={form.message}
-              onChange={handleChange}
-              error={!!errors.message}
-              multiline
-              rows={4}
-            />
-            <FormHelperText error>{errors.message}</FormHelperText>
-          </FormControl>
-        </div>
-
-        <Button type="submit" variant="contained" color="primary" fullWidth>
-          Send Message
-        </Button>
-      </form>
-    </div>
-  );
-};
-
-export default Contact;
+export default ContactUs;

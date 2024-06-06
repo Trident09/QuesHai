@@ -22,7 +22,7 @@ export default function Layout() {
 	) : (
 		<div className="body">
 			<NavBar />
-			<main>
+			<main className="mt-24 min-h-[95vh]">
 				<Container>
 					<Outlet />
 				</Container>
