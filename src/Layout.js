@@ -10,9 +10,10 @@ export default function Layout() {
 
 	useEffect(() => {
 		const delay = () => {
+			const randomDelay = Math.floor(Math.random() * 3000) + 1000; // Random delay between 1 to 3 seconds
 			setTimeout(() => {
 				setIsLoading(false);
-			}, 1650);
+			}, randomDelay);
 		};
 		delay();
 	}, []);
